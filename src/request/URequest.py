@@ -10,7 +10,6 @@ class URequest:
     @staticmethod
     def html_to_soup(html: object):
         to_convert = None
-
         if type(html) != bSoup:
             to_convert = str(html)
 
@@ -20,7 +19,6 @@ class URequest:
     def create_soup_page(url: str):
         page_soup = None
         u_client = None
-
         try:
             u_client = urequest(url)
             page_html = u_client.read()
